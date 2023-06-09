@@ -12260,9 +12260,6 @@ var _gsScope =
                 ? m.video.height("auto").width(m.wW + "px")
                 : m.video.height(m.wH + "px").width("auto");
             }),
-            (m.track = function (t) {
-              void 0 !== ga && ga("send", "pageview", t);
-            }),
             (m.onDocumentReady = function (t) {
               switch (((m.pageTransition = new h()), t)) {
                 case "home":
@@ -12713,7 +12710,6 @@ var _gsScope =
                   t.ctx.clip(),
                   t.ctx.translate(i + r / 2, n + s / 2),
                   t.ctx.scale(t.seashellDim.scale, t.seashellDim.scale),
-                  t.ctx.drawImage(e, -r / 2, -s / 2, r, s),
                   t.ctx.restore();
               }),
               (t.draw = function () {
@@ -12749,7 +12745,6 @@ var _gsScope =
                     function () {
                       (W.currentPage = i),
                         $("body").attr("data-page-id", i),
-                        W.track(e),
                         t.popstate || history.pushState(i, "", e),
                         t.scrollTop(),
                         W.onDocumentReady(W.currentPage),
